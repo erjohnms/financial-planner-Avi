@@ -13,4 +13,10 @@
     <PackageReference Include="Scalar.AspNetCore" Version="2.*" />
   </ItemGroup>
 
+  <!-- Test-enablement seam: lets BackEnd.Tests reference the internal top-level Program type
+       for WebApplicationFactory<Program>. No behavior change. -->
+  <ItemGroup>
+    <InternalsVisibleTo Include="BackEnd.Tests" />
+  </ItemGroup>
+
 </Project>
